@@ -31,6 +31,10 @@ module.exports = shipit => {
         await shipit.remote(`cd ~/${dir} && pm2 start yarn --name strapi -- start`);
         // this command for restart using if u have already start
         // await shipit.remote(`cd ~/${dir} && pm2 restart strapi`);
+        await shipit.remote(`cd ~/${dir} && caddy run --config ./Caddyfile`);
+        await shipit.remote(`cd ~/${dir} && caddy fmt --overwrite`);
+        // this command for reload caddyfile if have changes
+        // await shipit.remote(`cd ~/${dir} && caddy reload --config ./Caddyfile`);
     });
 
 };
