@@ -27,7 +27,10 @@ module.exports = shipit => {
         await shipit.remote(`cd ~/${dir} && cp .env.prod .env`);
         await shipit.remote(`cd ~/${dir} && npm install`);
         await shipit.remote(`cd ~/${dir} && npm run build`);
+        // this command using for the first time start using pm2
         await shipit.remote(`cd ~/${dir} && pm2 start yarn --name strapi -- start`);
+        // this command for restart using if u have already start
+        // await shipit.remote(`cd ~/${dir} && pm2 restart strapi`);
     });
 
 };
