@@ -2048,7 +2048,7 @@
     node-fetch "2.7.0"
     node-schedule "2.1.0"
 
-"@strapi/typescript-utils@4.24.0":
+"@strapi/typescript-utils@4.24.0", "@strapi/typescript-utils@^4.24.0":
   version "4.24.0"
   resolved "https://registry.yarnpkg.com/@strapi/typescript-utils/-/typescript-utils-4.24.0.tgz#196b9e4fd6a6d2b48f45f8bdc74224e3284eee1c"
   integrity sha512-+mz6sTiVED4cTgiJd9Hwbc6PN50TYqSG9pZG3oKfUH2GBOyMiPlEXNQeBoUakhnHhYceJQG7AqDdnEMcKjGQNQ==
